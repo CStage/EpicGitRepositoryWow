@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class ItemTracker {
-    private ArrayList<String> items;
+    private ArrayList<Item> items;
 
     public ItemTracker() {
         items = new ArrayList<>();
@@ -9,9 +9,16 @@ public class ItemTracker {
 
     //1. Add method
 
-    public void addItems(String item) {
-        items.add(item);
+    public void addItems(String itemName, int itemValue) {
+        items.add(new Item(itemName, itemValue));
     }
+
+    /**
+     * Sorting all the items in alphabetical order
+     * @param x
+     */
+
+
 
 
     /** 
@@ -22,17 +29,13 @@ public class ItemTracker {
     public void remove(String x){
         if (items.contains(x))
             items.remove(x);
-
-        else {
-            System.out.println(x + " is not currently in your items!");
-        }
     }
 
      /**
     @return all items in the list
      */
     
-    public ArrayList<String> getItems() {
+    public ArrayList<Item> getItems() {
         return items; 
     }
 
@@ -42,7 +45,10 @@ public class ItemTracker {
     */ 
     
 
-    public String getItem(int index) {
+    public String getItem(String item) {
+        for (Item item : items) {
+            if(item.name)
+        }
         return items.get(index);
     }
 }
