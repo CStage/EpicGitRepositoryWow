@@ -22,6 +22,10 @@ public class ItemTracker {
     public void remove(String x){
         if (items.contains(x))
             items.remove(x);
+
+        else {
+            System.out.println(x + " is not currently in your items!");
+        }
     }
 
      /**
