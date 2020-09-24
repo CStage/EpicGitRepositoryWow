@@ -14,7 +14,11 @@ public class ItemTracker {
     }
 
 
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hej Johannes");
+    /* Remove item from list:
+    @param x String to be removed
+    */
+    public void remove(String x){
+        if (items.contains(x))
+            items.remove(x);
     }
 }
