@@ -66,4 +66,10 @@ public class ItemTracker {
         }
         return false;
     }
+
+
+    public double getNetWorth() {
+        var sum = 0; 
+        
+    }
 }
