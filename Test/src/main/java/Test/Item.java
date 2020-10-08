@@ -1,7 +1,7 @@
 package Test;
 
 public class Item {
-    protected String name; 
+    protected String name;
     protected int purchaseAmount;
     protected int age;
     private double currentValue;
@@ -11,22 +11,28 @@ public class Item {
         this.name = name;
         this.purchaseAmount = purchaseAmount;
         this.age = age;
-        getCurrentValue();
-
+        setCurrentValue();
     }
+
 
     public String getName() {
         return this.name;
     }
 
-    public void getCurrentValue() {
-        this.currentValue = Math.pow(this.purchaseAmount*((1-this.depreciationRate)/100), this.age);
-    }
-
-    public void ageOneYear() {
-        this.age+=1;
-        getCurrentValue();
+    public void setCurrentValue() {
+        this.currentValue = Math.pow(this.purchaseAmount * ((1 - this.depreciationRate) / 100), this.age);
     }
 
     
+    public double depreciationAmount() {
+        var D = purchaseAmount - currentValue; 
+        return D;
+    }  
+
+
+    public double getCurrentValue() {
+       return this.currentValue;
+    }
+
+
 }

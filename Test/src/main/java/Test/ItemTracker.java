@@ -70,6 +70,11 @@ public class ItemTracker {
 
     public double getNetWorth() {
         var sum = 0; 
-        
+        for (Item i : items) {
+            var itemValue = i.getCurrentValue();
+            sum += itemValue;
+        }
+        return sum;
     }
+    
 }
