@@ -24,7 +24,7 @@ public class Main {
 
             if (input == 1) {
                 System.out.println("Please input what you want to add: ");
-                itemTracker.addItems(scan.next(), scan.nextInt());
+                itemTracker.addItems(scan.next(), scan.nextInt(), scan.nextInt());
             }
             else if (input == 2) {
                 System.out.println("Please input what you want to remove");
