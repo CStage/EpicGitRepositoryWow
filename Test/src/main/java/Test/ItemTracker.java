@@ -1,16 +1,18 @@
+package Test;
+
 import java.util.ArrayList;
 
 public class ItemTracker {
     private ArrayList<Item> items;
 
     public ItemTracker() {
-        items = new ArrayList<>();
+        this.items = new ArrayList<>();
     }
 
     //1. Add method
 
     public void addItems(String itemName, int itemValue) {
-        items.add(new Item(itemName, itemValue));
+        this.items.add(new Item(itemName, itemValue));
     }
 
     /**
@@ -27,8 +29,8 @@ public class ItemTracker {
     */ 
     
     public void remove(String x){
-        if (items.contains(x))
-            items.remove(x);
+        if (this.items.contains(x))
+            this.items.remove(x);
     }
 
      /**
@@ -46,9 +48,7 @@ public class ItemTracker {
     
 
     public String getItem(String item) {
-        for (Item item : items) {
-            if(item.name)
-        }
-        return items.get(index);
+        //ToDO fix this
+        return null;
     }
 }

@@ -1,3 +1,5 @@
+package Test;
+
 import java.util.Scanner;
 
 public class Main {
@@ -22,14 +24,14 @@ public class Main {
 
             if (input == 1) {
                 System.out.println("Please input what you want to add: ");
-                itemTracker.addItems(scan.next());
+                itemTracker.addItems(scan.next(), scan.nextInt());
             }
             else if (input == 2) {
                 System.out.println("Please input what you want to remove");
                 itemTracker.remove(scan.next());
             }
             else if (input == 3) {
-                for (String i : itemTracker.getItems()) {
+                for (Item i : itemTracker.getItems()) {
                     System.out.println(i);
 
                 }
