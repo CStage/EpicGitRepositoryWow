@@ -11,8 +11,8 @@ public class ItemTracker {
 
     //1. Add method
 
-    public void addItems(String itemName, int itemValue) {
-        this.items.add(new Item(itemName, itemValue));
+    public void addItems(String itemName, int itemValue, int age) {
+        this.items.add(new Item(itemName, itemValue, age));
     }
 
     /**
