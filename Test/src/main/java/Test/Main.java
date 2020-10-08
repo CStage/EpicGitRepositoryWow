@@ -38,6 +38,7 @@ public class Main {
             }
             else if (input == 4) {
                 running = false;
+                scan.close();
         }
 
         

@@ -28,8 +28,22 @@ public class ItemTracker {
      */
 
     public void remove(String x) {
-        if (this.items.contains(x))
-            this.items.remove(x);
+        boolean itemRemoved = false;
+        for (Item i : this.items) {
+            if (i.getName().equals(x)) {
+                this.remove(x);
+                itemRemoved=true;
+                break;
+            }
+        }
+        if (!itemRemoved) {
+            System.out.println("Item with name: " + x + " does not exist...");
+            System.out.println();
+        }
+        else {
+            System.out.println(x + " was removed.");
+            System.out.println();
+        }
     }
 
     /**
